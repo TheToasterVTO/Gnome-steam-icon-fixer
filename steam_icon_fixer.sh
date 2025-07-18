@@ -19,7 +19,7 @@ done
 
 for file in "${file_list[@]}"; do
 
-    if [ "$file" != "add_startup_wmclass.sh" ]; then
+    if [ "$file" != "steam_icon_fixer.sh" ]; then
 
         GAME_ID=$(grep '^Exec=' "$file" | grep -oP 'steam://rungameid/\K[0-9]+')
 
