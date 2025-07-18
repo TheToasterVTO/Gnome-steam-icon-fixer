@@ -21,7 +21,7 @@ for file in "${file_list[@]}"; do
 
     if [ "$file" != "add_startup_wmclass.sh" ]; then
 
-        GAME_ID=$(grep '^Exec=' "$name" | grep -oP 'steam://rungameid/\K[0-9]+')
+        GAME_ID=$(grep '^Exec=' "$file" | grep -oP 'steam://rungameid/\K[0-9]+')
 
         if [[ -z "$GAME_ID" ]]; then
             echo "Game ID not found in $file"
